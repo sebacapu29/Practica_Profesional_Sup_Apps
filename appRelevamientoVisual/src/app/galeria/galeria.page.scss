@@ -1,0 +1,16 @@
+ion-content{
+    --background: radial-gradient(circle, #B1F8F2 0%, rgba(70,252,240,1) 100%);
+}
+ion-img{
+    border: 2px solid grey;
+}
+ion-toolbar{
+    text-align: center;
+    --background:#FFFC99
+}
+ion-content ion-list ion-item{
+    --background: radial-gradient(circle, #B1F8F2 0%, rgba(70,252,240,1) 100%);
+}
+.progess{
+text-align: center;
+}

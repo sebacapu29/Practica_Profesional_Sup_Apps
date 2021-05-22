@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Galería</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let foto of listaFotos" (click)="detalleFoto(foto)">
+      <ion-thumbnail slot="start" >
+        <ion-img [src]="foto.url"></ion-img>
+      </ion-thumbnail>
+      <ion-label>{{foto.name}}</ion-label>
+    </ion-item>
+  </ion-list>
+  
+  
+    <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="camera" (click)="takePicture()"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+   
+    
+  <div style="margin:auto; width:50%" class="progess">
+    <ion-spinner name="bubbles" *ngIf="progress"></ion-spinner>
+  </div>
+</ion-content>

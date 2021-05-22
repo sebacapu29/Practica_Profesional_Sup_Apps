@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      ¡Tocá para Activarla!
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div class="container">
+    <img src="assets/images/alarma-color.png" class="alarma" alt="sin foto" *ngIf="estado == 1" (click)="ActicarODesactivarAlarma()">
+    <img src="assets/images/alarma-sin-color.png" class="alarma" alt="sin foto" *ngIf="estado == 0" (click)="ActicarODesactivarAlarma()">
+  </div>
+  <div>
+    <p>No hay mensajes aún</p>
+  </div>
+</ion-content>

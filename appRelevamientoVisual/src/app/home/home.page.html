@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Seleccione un Tópico
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-grid>
+  <ion-row>
+   <ion-col >
+     <ion-button color="success" (click)="IrACosas('lindas')">Cosas Lindas<ion-icon name="happy"></ion-icon></ion-button>
+ 
+   </ion-col>
+   <ion-col >
+     <ion-button color="dark" (click)="IrACosas('feas')">Cosas Feas<br><ion-icon name="sad"></ion-icon></ion-button>
+   </ion-col>
+ </ion-row>
+ </ion-grid>
+  <!-- <img src="assets/images/edificio1.jpg" alt="sin img"> -->
+</ion-content>

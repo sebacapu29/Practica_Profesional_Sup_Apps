@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg">
+  <div *ngIf="landscape">
+    <ion-grid class="landscape-grid">
+      <ion-row>
+        <ion-col *ngFor="let numero of imgSource" size="3.5" class="ion-np-padding" >
+          <div class="fancybutton"  (click)="PronunciarAnimal(numero)" >
+            <img [src]="numero" [ngClass]="{'landscape-class': landscape}" >
+        </div>
+        </ion-col>
+      </ion-row>
+  
+    </ion-grid>
+  </div>
+  <div *ngIf="!landscape">
+    <ion-grid class="no-landscape-grid">
+      <ion-row >
+        <ion-col *ngFor="let numero of imgSource" size="6" class="ion-padding">
+          <div class="fancybutton"  (click)="PronunciarAnimal(numero)" >
+            <img [src]="numero"  [ngClass]=" {'no-landscape-class': !landscape}"  >
+        </div>
+        </ion-col>
+      </ion-row>
+  
+    </ion-grid>
+  </div>
+</ion-content>

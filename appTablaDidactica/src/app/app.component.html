@@ -1,0 +1,40 @@
+<ion-app>
+  <img #splash class="rotate-scale-up" src="assets/images/tabla-didactica-splash.png"  [hidden]="!routerHidden" />
+  <title>splash</title>
+
+  <ion-router-outlet [hidden]="routerHidden"></ion-router-outlet>
+   <!-- fab placed to the top end -->
+   <ion-fab horizontal="end" vertical="top" [hidden]="oculto">
+    <ion-fab-button>
+      <ion-icon size="large" [src]="idiomaSeteado" ></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list>
+      <ion-fab-button color="light" (click)="setIdioma('es')">
+        <ion-icon size="large" src="assets/images/banderas/espana.svg"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light" (click)="setIdioma('pt')">
+        <ion-icon size="large" src="assets/images/banderas/brasil.svg"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light" (click)="setIdioma('en')">
+        <ion-icon size="large" src="assets/images/banderas/reino-unido.svg"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-fab vertical="top" horizontal="start" [hidden]="oculto" >
+    <ion-fab-button>
+      <ion-icon  size="large" [src]="tematicaSeleccionada"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list>
+      <ion-fab-button color="light" (click)="ActividadAnimales()">
+        <ion-icon size="large" [src]="imgSource[0]"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light" (click)="ActividadColores()">
+        <ion-icon size="large" [src]="imgSource[1]"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="light" (click)="ActividadNumeros()">
+        <ion-icon size="large" [src]="imgSource[2]"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-app>

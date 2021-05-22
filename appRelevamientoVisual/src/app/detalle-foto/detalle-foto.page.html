@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Detalle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-img [src]="url"></ion-img>
+  </div>
+  <ion-item-divider>
+
+    <ion-row> 
+      <ion-col size="4">
+        <ion-button size="large" [disabled]="puedeVotar" (click)="reaccionarAFoto(1)"> <ion-icon name="thumbs-up-sharp" ></ion-icon><p>{{likes}}</p></ion-button>
+      </ion-col>
+      <ion-col size="2">
+        
+      </ion-col>
+      <ion-col size="4">
+        <ion-button size="large" [disabled]="puedeVotar" (click)="reaccionarAFoto(0)"><ion-icon name="thumbs-down-sharp"></ion-icon><p>{{dislikes}}</p></ion-button>
+      </ion-col>
+      <ion-col size="2">
+        
+      </ion-col>
+    </ion-row>
+  </ion-item-divider>
+  <p><strong>Usuario:</strong> {{usuario}}</p>
+  <p><strong>Fecha: </strong>{{fecha}}</p><br>
+</ion-content>

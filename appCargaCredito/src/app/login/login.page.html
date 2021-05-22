@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Inicio de Sesión
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+
+  <div id="container">
+
+    <div class="logoHeader">
+      <img alt="logo" height="60" style="position: relative" src="../assets/icon/icono-carga-cred.png">
+    </div>
+    <form  [formGroup]="miFormulario" (ngSubmit)="Autenticar(miFormulario.value)">
+      <div padding>
+        <ion-input type="email"  class="input-access-code" placeholder="Email" formControlName="email"></ion-input>
+        <br>
+        <ion-input type="password"  class="input-access-code" placeholder="Password" formControlName="clave"></ion-input>
+        <br>
+        <ion-grid>
+          <ion-row class="ion-align-items-center">    
+            <ion-col size="12" class="ion-text-center">
+              <button fill="clear" ion-button block class="login" type="submit">INICIAR SESIÓN</button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </form>
+
+    <div style="margin:auto; width:50%">
+      <ion-spinner name="bubbles" *ngIf="ingresando"></ion-spinner>
+    </div>
+
+    <ion-list>
+      <ion-radio-group value="biff">
+        <ion-item *ngFor="let usuario of listaUsuarioModel">
+          <ion-label>{{usuario.nombre}}</ion-label>
+          <ion-radio  [value]="usuario.perfil" (ionFocus)="SeleccionUsuario(usuario)"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+
+  </div>
+</ion-content>

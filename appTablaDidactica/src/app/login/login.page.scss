@@ -1,0 +1,40 @@
+form{
+    margin-top: 15%;
+}
+
+ion-content{
+    --background: url(../../assets/images/backgroundd.png) 0 0/100% 100% no-repeat; 
+}
+ion-select-option{
+    --background: #FDD4EB;
+}
+ion-toolbar{
+    text-align: center;
+}
+ion-list{
+    padding: 0;
+}
+ion-item {
+    --background: #FDD4EB;
+    border: 3.5px solid darkmagenta;
+    color: white;
+}
+.seleccion{
+    color: black;
+    font-size: medium;
+    font-weight: bold;
+}
+.letra{
+    color: black;
+    font-size: x-large;
+}
+ion-toolbar{
+    --background:#99A3A4
+  }
+ion-button{
+    --background: #F1C40F;
+}
+.item-content{
+    // background: url(../../assets/images/img-fondo.jfif) 0 0/100% 100% no-repeat;
+    background-color: transparent;
+}

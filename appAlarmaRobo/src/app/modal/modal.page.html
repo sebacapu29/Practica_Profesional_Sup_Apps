@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Desbloqueo Alarma</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item no-padding class="box">
+    <ion-label position="floating">
+      <ion-icon name="bag-outline"></ion-icon>
+      Ingrese Clave
+    </ion-label>
+    <ion-input color="secondary" type="password" [(ngModel)]="clave"></ion-input>
+  </ion-item>
+  <ion-button expand="full" (click)="confirmar()">Confirmar</ion-button>
+</ion-content>

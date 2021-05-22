@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="bg">
+  <div *ngIf="landscape">
+    <ion-grid class="landscape-grid">
+      <ion-row>
+        <ion-col *ngFor="let color of imgSource" size="3.5" class="ion-no-padding">
+          <div class="fancybutton"  (click)="PronunciarColor(color)" >
+            <img [src]="color" [ngClass]="{'landscape-class': landscape}" scroll="false" >
+        </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <div *ngIf="!landscape">
+    <ion-grid class="no-landscape-grid">
+      <ion-row>
+        <ion-col *ngFor="let color of imgSource" size="6" class="ion-padding">
+          <div class="fancybutton"  (click)="PronunciarColor(color)" >
+            <img [src]="color" [ngClass]=" {'no-landscape-class': !landscape}" scroll="false" scroll="false" >
+        </div>
+        </ion-col>
+      </ion-row>
+  
+    </ion-grid>
+
+  </div>
+
+</ion-content>

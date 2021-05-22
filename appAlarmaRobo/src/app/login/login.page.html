@@ -1,0 +1,118 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="toolbar">
+    <ion-title>
+      Alarma Robo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background">
+  <ion-header collapse="condense" >
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+
+    <div class="theme-bg"></div>
+    <div class="auth-content">
+  
+      <!-- Logo -->
+      <div padding-horizontal text-center class="animated fadeInDown">
+        <div class="logo"></div>
+        <h4 no-margin>
+          <ion-text color="light" class="fw700">
+           
+          </ion-text>
+        </h4>
+      </div>
+  
+      <!-- Login form -->
+      <form [formGroup]="miFormulario" class="list-form"  (ngSubmit)="Autenticar(miFormulario.value)">
+        <ion-item no-padding class="box">
+          <ion-label position="floating">
+            <ion-icon name="mail" item-start></ion-icon>
+            Correo
+          </ion-label>
+          <ion-input color="secondary" type="email" formControlName="email"></ion-input>
+        </ion-item>
+        <!-- <p ion-text class="text08" *ngIf="onLoginForm.get('email').touched && onLoginForm.get('email').hasError('required')">
+          <ion-text color="warning">
+            Required Field
+          </ion-text>
+        </p> -->
+  
+        <ion-item no-padding class="box">
+          <ion-label position="floating">
+            <ion-icon name="bag-outline"></ion-icon>
+            Clave
+          </ion-label>
+          <ion-input color="secondary" type="password" formControlName="clave"></ion-input>
+        </ion-item>
+        <!-- <p ion-text color="warning" class="text08" *ngIf="onLoginForm.get('password').touched && onLoginForm.get('password').hasError('required')">
+          <ion-text color="warning">
+            Required Field
+          </ion-text>
+          </p> -->
+          <ion-button class="button" icon-left size="large" expand="full" shape="round" color="dark" type="submit" tappable>
+            <ion-icon name="log-in"></ion-icon>
+            Iniciar Sesión
+          </ion-button> 
+      </form>
+  
+      <!-- <p text-right tappable (click)="forgotPass()" class="paz">
+        <ion-text color="light">
+          <strong>O Inicie sesión con:</strong>
+        </ion-text>
+      </p> -->
+  
+      <div>
+         
+<!--   
+        <p text-center>
+          <ion-text color="light">
+            Or Signin with:
+          </ion-text>
+        </p> -->
+  
+        <ion-grid class="btn-group">
+          <ion-row>
+            <!-- <ion-col size="4">
+              <ion-button shape="round" expand="full" color="secondary">
+                <ion-icon slot="icon-only" name="logo-facebook"></ion-icon>
+              </ion-button>
+            </ion-col>
+            <ion-col size="4">
+              <ion-button shape="round" expand="full" color="secondary">
+                <ion-icon slot="icon-only" name="logo-twitter"></ion-icon>
+              </ion-button>
+            </ion-col> -->
+            <!-- <ion-col size="4">
+              <ion-button shape="round" expand="full" color="secondary">
+                <ion-icon name="logo-google"></ion-icon>
+              </ion-button>
+            </ion-col> -->
+          </ion-row>
+        </ion-grid>
+  
+      </div>
+  
+    </div>
+    <div style="margin:auto; width:50%">
+      <ion-spinner name="bubbles" *ngIf="ingresando"></ion-spinner>
+    </div>
+
+    <ion-list>
+      <ion-radio-group value="biff">  
+    
+        <ion-item *ngFor="let usuario of listaUsuarioModel">
+          <ion-label>{{usuario.nombre}}</ion-label>
+          <ion-radio  [value]="usuario.perfil" (ionFocus)="SeleccionUsuario(usuario)"></ion-radio>
+        </ion-item>
+  
+      </ion-radio-group>
+    </ion-list>
+
+  </div>
+</ion-content>

@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tabla Didáctica
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div id="container">
+
+    <form [formGroup]="miFormulario"
+          (ngSubmit)="Autenticar(miFormulario.value)">
+      <div class="item-content">
+      <ion-item >
+        <ion-label position="floating" class="letra"><strong>Correo</strong></ion-label>
+        <ion-input formControlName="email" name="usuario" class="letra" required></ion-input>
+        <ion-icon  slot="end" name="mail-outline"></ion-icon>
+      </ion-item>
+
+      <br>
+      <ion-item>
+        <ion-label position="floating" class="letra"><strong>Clave</strong></ion-label>
+        <ion-input type="password" formControlName="clave" name="clave" class="letra" required></ion-input>
+        <ion-icon  slot="end" name="key-outline"></ion-icon>
+      </ion-item>
+    </div>
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit"  size="large" expand="block" class="letra"><strong>Iniciar Sesión</strong></ion-button>
+        </ion-col>
+      </ion-row>
+
+    </form>
+
+    <div style="margin:auto; width:50%">
+      <ion-spinner name="bubbles" *ngIf="ingresando"></ion-spinner>
+    </div>
+
+
+    <ion-list>
+    
+      <ion-item>
+        <ion-label class="letra"><strong>Usuario</strong></ion-label>
+        <ion-select class="seleccion" placeholder="Seleccione usuario" (ionChange)="SeleccionUsuario($event)">
+          <ion-select-option *ngFor="let usuario of listaUsuarioModel" [value]="usuario" >{{usuario.nombre}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      
+    </ion-list>
+
+  </div>
+</ion-content>

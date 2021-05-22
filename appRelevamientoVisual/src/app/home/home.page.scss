@@ -1,0 +1,48 @@
+.fancybutton ion-button{
+  height: 100px;
+}
+ion-content{
+  --background: url(../../assets//images/edificio1.jpg) 0 0/100% 100% no-repeat;
+}
+ion-toolbar{
+  --background:#40476D;
+  text-align: center;
+  color: white;
+}
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+// ion-button {
+//   height: 100%;
+//   width: 100%;
+// }
+ion-button{
+  height: 100%;
+  width: 100%;
+}
+ion-grid {
+  height: 100%;
+  border: 3px solid #196F3D;
+}
+
+ion-row {
+  height: 100%;
+}
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}

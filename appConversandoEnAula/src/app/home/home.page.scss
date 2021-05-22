@@ -1,0 +1,39 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+// ion-button {
+//   height: 100%;
+//   width: 100%;
+// }
+ion-button{
+  height: 50%;
+  width: 100%;
+}
+ion-grid {
+  height: 100%;
+  border: 3px solid #196F3D;
+}
+ion-row {
+  height: 100%;
+}
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+ion-toolbar{
+  text-align: center;
+  --background:#74F2CE;
+}
+#container a {
+  text-decoration: none;
+}

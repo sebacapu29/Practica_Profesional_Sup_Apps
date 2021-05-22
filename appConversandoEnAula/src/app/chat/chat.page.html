@@ -1,0 +1,55 @@
+
+<ion-header translucent>
+  <ion-toolbar [ngClass]="{ 'bg_toolbar_div_a': esDivA, 'bg_toolbar_div_b' : !esDivA}">
+   <ion-buttons slot="start">
+     <ion-back-button></ion-back-button>
+   </ion-buttons>
+    <ion-thumbnail slot="start">
+      <!-- <img src="{{paramData.image}}" > -->
+    </ion-thumbnail>
+    <ion-title color="light">
+      {{esDivA ? 'División A' : 'División B'}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content #IonContent fullscreen="true" [ngClass]="{ 'bg_div_a': esDivA, 'bg_div_b' : !esDivA}">
+  
+  
+  <ion-grid>
+
+    <ion-row *ngFor="let chat of msgList; let i = index;">
+      <ion-col size="9" class="message other-message" *ngIf="chat.usuario !== usuarioLogueado">
+        <div class="nombre"><b> {{chat.nombre}}</b></div>
+        <span>{{chat.mensaje}}</span>
+        <div class="time">
+          {{chat.fecha ? chat.fecha.toDate().toLocaleDateString() : '-'}} {{chat.hora}}
+        </div>
+      </ion-col>
+
+      <ion-col offset="3" size="9" *ngIf="chat.usuario === usuarioLogueado" class="message message my-message">
+        <div class="myName"><b> {{chat.nombre}}</b></div>
+        <span>{{chat.mensaje}}</span>
+        <div class="time">
+          {{chat.fecha ? chat.fecha.toDate().toLocaleDateString() : '-'}}  {{chat.hora}}
+        </div>
+      </ion-col>
+
+    </ion-row>
+
+  </ion-grid>
+  
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)=" sendMsg()">
+      <ion-icon name="send" expand="icon-only"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
+
+<ion-footer >
+  <ion-item [ngClass]="{ 'bg_toolbar_div_a': esDivA, 'bg_toolbar_div_b' : !esDivA}">
+    <ion-icon slot="start" name="camera" expand="icon-only" class="footerIcon"></ion-icon>
+    <ion-input class="input-box" type="text" placeholder="Escribe un mensaje..." [(ngModel)]="user_input" (keypress)="userTyping($event)"></ion-input>
+  </ion-item>
+</ion-footer>

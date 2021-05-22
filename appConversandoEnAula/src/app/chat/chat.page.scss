@@ -1,0 +1,57 @@
+
+.bg_div_b{
+  --background: radial-gradient(at 0 50%, rgb(55, 150, 52), #3f3c41);
+}
+.bg_div_a{
+  --background: radial-gradient(at 0 50%, rgb(237, 216, 61), #3f3c41);
+}
+
+.bg_toolbar_div_a{
+  --background:#FFED65;
+}
+.bg_toolbar_div_b{
+  --background:#0CCE6B;
+}
+// ion-content {
+//   --background: radial-gradient(at 0 50%, rgb(84, 153, 199), #242225);
+// }
+// ion-header {
+//   --background: #5b2573;
+// }
+ion-toolbar,
+ion-item {
+  --background: transparent;
+}
+.message{
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 4px;
+  white-space: pre-wrap;
+}
+.other-message{
+  background: var(--ion-color-tertiary);
+  color: #fff;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.my-message{
+  background: #595959;
+  color: #fff;
+  margin-top: 20px;
+}
+.time{
+  color: #dfdfdf;
+  float: right;
+  font-size: small;
+}
+.myName{
+  color: lightblue;
+  margin-bottom: 5px;
+}
+.nombre{
+  color: #3f3c41;
+  margin-bottom: 5px;
+}
+ion-title{
+  text-align: center;
+}

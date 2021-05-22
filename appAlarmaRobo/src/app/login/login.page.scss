@@ -1,0 +1,30 @@
+
+
+    ion-content.background {
+        --background: linear-gradient(135deg, var(--ion-color-dark), var(--ion-color-primary));
+    }
+
+
+.paz {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+ion-toolbar.toolbar{
+    --background:#154360;
+    text-align: center;
+    color: white;
+}
+.box {
+    border-color: #403E39;
+    border-width: thin;
+    border-style: solid;
+    border-radius: 25px;
+    margin-top: 10px;
+}
+.list-form{
+    margin-top: 10%;
+}
+.button{
+    margin-top: 10%;
+}
